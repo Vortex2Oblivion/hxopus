@@ -10,12 +10,12 @@
 #include <math.h>
 #include <haxe/io/Bytes.h>
 
+
 typedef Array_obj<unsigned char> *ByteArray;
 
-static bool is_buffer(hx::Object *object)
+static bool is_buffer(ByteArray object)
 {
-	ByteArray b = dynamic_cast<ByteArray>(object);
-	return b != 0;
+	return object != 0;
 }
 
 ByteArray alloc_buffer_length(int inLen)
@@ -33,13 +33,15 @@ int get_buffer_size(ByteArray inBuffer)
 	return inBuffer->length;
 }
 
-static ByteArray hxopus_to_bytes(ByteArray data_buffer_value)
+static ByteArray hxopus_to_bytes(::Array< unsigned char > _d)
 {
+	ByteArray data_buffer_value = _d.GetPtr();
 	if (!is_buffer(data_buffer_value))
 	{
 		val_throw(alloc_string("Expected to be a buffer"));
 		return null();
 	}
+	
 
 	ByteArray input = data_buffer_value;
 	cherry_file file = cherry_load_file_from_memory(get_buffer_data(input), get_buffer_size(input));
