@@ -3,6 +3,7 @@
 	<set name="hxopus_folder" value="${haxelib:hxopus}/include" />
 
 	<files id="haxe">
+		<compilerflag value="-I${hxopus_folder}/" />
 		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
 		<compilerflag value="-I${hxopus_folder}/opus" />
 		<compilerflag value="-I${hxopus_folder}/opus/include" />
@@ -22,7 +23,7 @@
 
 		<compilerflag value="-DWIN32" if="windows" />
 
-		<file name="${hxopus_folder}/common/hxoups.cpp" />
+		<file name="${hxopus_folder}/hxopus.cpp" />
 
 		<file name="${hxopus_folder}/cherryaudio/cherryaudio.c" />
 
