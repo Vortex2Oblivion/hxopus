@@ -4,5 +4,8 @@
 
 static const char * hxopus_get_version_string();
 
-static buffer hxopus_to_bytes(value data_buffer_value);
+typedef Array_obj<unsigned char> *ByteArray;
+
+
+static ByteArray hxopus_to_bytes(ByteArray data_buffer_value);
 #endif // HXOPIS_H

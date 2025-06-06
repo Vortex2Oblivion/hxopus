@@ -8,21 +8,44 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <math.h>
+#include <haxe/io/Bytes.h>
 
 typedef Array_obj<unsigned char> *ByteArray;
 
+static bool is_buffer(hx::Object *object)
+{
+	ByteArray b = dynamic_cast<ByteArray>(object);
+	return b != 0;
+}
 
-static buffer hxopus_to_bytes(value data_buffer_value) {
-	if (!val_is_buffer(data_buffer_value)) {
+ByteArray alloc_buffer_length(int inLen)
+{
+	return new Array_obj<unsigned char>(inLen, inLen);
+}
+
+char *get_buffer_data(ByteArray inBuffer)
+{
+	return inBuffer->GetBase();
+}
+
+int get_buffer_size(ByteArray inBuffer)
+{
+	return inBuffer->length;
+}
+
+static ByteArray hxopus_to_bytes(ByteArray data_buffer_value)
+{
+	if (!is_buffer(data_buffer_value))
+	{
 		val_throw(alloc_string("Expected to be a buffer"));
 		return null();
 	}
 
-	buffer input = val_to_buffer(data_buffer_value);
-	cherry_file file = cherry_load_file_from_memory(buffer_data(input), buffer_size(input));
+	ByteArray input = data_buffer_value;
+	cherry_file file = cherry_load_file_from_memory(get_buffer_data(input), get_buffer_size(input));
 
-	buffer buf = alloc_buffer_len(file.pcm.size);
-	ByteArray b = (ByteArray) buf;
+	ByteArray buf = alloc_buffer_length(file.pcm.size);
+	ByteArray b = (ByteArray)buf;
 	memcpy(b->GetBase(), file.pcm.data, b->length);
 	free(file.pcm.data);
 	return buf;
