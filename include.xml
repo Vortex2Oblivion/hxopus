@@ -21,6 +21,8 @@
 		<compilerflag value="-DRANDOM_PREFIX=speex" />
 		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
 
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
 		<compilerflag value="-DWIN32" if="windows" />
 
 		<file name="${hxopus_folder}/hxopus.cpp" />
@@ -178,7 +180,6 @@
 		<file name="${hxopus_folder}/opus/silk/VAD.c" />
 		<file name="${hxopus_folder}/opus/silk/VQ_WMat_EC.c" />
 	</files>
-	
 
     <set name="SLIBEXT" value=".lib" if="windows" />
 	<set name="SLIBEXT" value=".a" unless="windows" />
