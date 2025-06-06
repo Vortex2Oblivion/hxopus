@@ -42,7 +42,6 @@
 		<file name="${hxopus_folder}/opus/src/mapping_matrix.c" />
 		<file name="${hxopus_folder}/opus/src/mlp_data.c" />
 		<file name="${hxopus_folder}/opus/src/mlp.c" />
-		<file name="${hxopus_folder}/opus/src/opus_compare.c" />
 		<file name="${hxopus_folder}/opus/src/opus_decoder.c" />
 		<file name="${hxopus_folder}/opus/src/opus_encoder.c" />
 		<file name="${hxopus_folder}/opus/src/opus_multistream_decoder.c" />
@@ -179,6 +178,7 @@
 		<file name="${hxopus_folder}/opus/silk/VAD.c" />
 		<file name="${hxopus_folder}/opus/silk/VQ_WMat_EC.c" />
 	</files>
+	
 
     <set name="SLIBEXT" value=".lib" if="windows" />
 	<set name="SLIBEXT" value=".a" unless="windows" />

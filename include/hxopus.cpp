@@ -38,7 +38,7 @@ static ByteArray hxopus_to_bytes(::Array< unsigned char > _d)
 	ByteArray data_buffer_value = _d.GetPtr();
 	if (!is_buffer(data_buffer_value))
 	{
-		val_throw(alloc_string("Expected to be a buffer"));
+		throw "Expected to be a buffer";
 		return null();
 	}
 	
