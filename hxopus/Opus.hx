@@ -1,13 +1,7 @@
 package hxopus;
 
 import cpp.ConstCharStar;
-import sys.io.File;
 import haxe.io.BytesData;
-#if cpp
-import cpp.Lib;
-#else
-import neko.Lib;
-#end
 import haxe.io.Bytes;
 #if openfl
 import openfl.media.Sound;
@@ -18,7 +12,7 @@ import openfl.utils.ByteArray;
 import flixel.sound.FlxSound;
 #end
 
-@:buildXml("<include name='${haxelib:hxopus}/include.xml' />")
+@:buildXml("<include name='${haxelib:hxopus}/build.xml' />")
 @:include("hxopus.hpp")
 extern class Opus {
 	/**

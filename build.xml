@@ -181,7 +181,27 @@
 		<file name="${hxopus_folder}/opus/silk/VQ_WMat_EC.c" />
 	</files>
 
-    <set name="SLIBEXT" value=".lib" if="windows" />
-	<set name="SLIBEXT" value=".a" unless="windows" />
-	<set name="SLIBEXT" value=".so" if="webos" />
+	<files id="__main__">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
+	</files>
 </xml>
