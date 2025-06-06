@@ -1,12 +1,185 @@
-<project>
-    <assets
-        path="ndll/ndll/Windows64/hxopus.ndll"
-        rename="hxopus.ndll"
-        if="windows"
-    />
-    <assets
-        path="ndll/ndll/Linux64/hxopus.ndll"
-        rename="hxopus.ndll"
-        if="linux"
-    />
-</project>
+<xml>
+	<pragma once="true" />
+	<set name="hxopus_folder" value="${haxelib:hxopus}/include" />
+
+	<files id="haxe">
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DWIN32" if="windows" />
+
+		<file name="${hxopus_folder}/common/hxoups.cpp" />
+
+		<file name="${hxopus_folder}/cherryaudio/cherryaudio.c" />
+
+		<file name="${hxopus_folder}/opusfile/src/http.c" />
+		<file name="${hxopus_folder}/opusfile/src/info.c" />
+		<file name="${hxopus_folder}/opusfile/src/internal.c" />
+		<file name="${hxopus_folder}/opusfile/src/opusfile.c" />
+		<file name="${hxopus_folder}/opusfile/src/stream.c" />
+		<file name="${hxopus_folder}/opusfile/src/wincerts.c" />
+
+		<file name="${hxopus_folder}/ogg/src/framing.c" />
+		<file name="${hxopus_folder}/ogg/src/bitwise.c" />
+
+		<file name="${hxopus_folder}/opus/src/analysis.c" />
+		<file name="${hxopus_folder}/opus/src/extensions.c" />
+		<file name="${hxopus_folder}/opus/src/mapping_matrix.c" />
+		<file name="${hxopus_folder}/opus/src/mlp_data.c" />
+		<file name="${hxopus_folder}/opus/src/mlp.c" />
+		<file name="${hxopus_folder}/opus/src/opus_compare.c" />
+		<file name="${hxopus_folder}/opus/src/opus_decoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus_encoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus_multistream_decoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus_multistream_encoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus_multistream.c" />
+		<file name="${hxopus_folder}/opus/src/opus_projection_decoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus_projection_encoder.c" />
+		<file name="${hxopus_folder}/opus/src/opus.c" />
+		<file name="${hxopus_folder}/opus/src/repacketizer.c" />
+
+		<file name="${hxopus_folder}/opus/celt/bands.c" />
+		<file name="${hxopus_folder}/opus/celt/celt.c" />
+		<file name="${hxopus_folder}/opus/celt/celt_lpc.c" />
+		<file name="${hxopus_folder}/opus/celt/cwrs.c" />
+		<file name="${hxopus_folder}/opus/celt/entcode.c" />
+		<file name="${hxopus_folder}/opus/celt/entdec.c" />
+		<file name="${hxopus_folder}/opus/celt/entenc.c" />
+		<file name="${hxopus_folder}/opus/celt/kiss_fft.c" />
+		<file name="${hxopus_folder}/opus/celt/laplace.c" />
+		<file name="${hxopus_folder}/opus/celt/mathops.c" />
+		<file name="${hxopus_folder}/opus/celt/mdct.c" />
+		<file name="${hxopus_folder}/opus/celt/modes.c" />
+		<file name="${hxopus_folder}/opus/celt/pitch.c" />
+		<file name="${hxopus_folder}/opus/celt/quant_bands.c" />
+		<file name="${hxopus_folder}/opus/celt/rate.c" />
+		<file name="${hxopus_folder}/opus/celt/vq.c" />
+		<file name="${hxopus_folder}/opus/celt/celt_decoder.c" />
+		<file name="${hxopus_folder}/opus/celt/celt_encoder.c" />
+
+		<file name="${hxopus_folder}/opus/silk/float/apply_sine_window_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/autocorrelation_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/burg_modified_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/bwexpander_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/corrMatrix_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/encode_frame_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/energy_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/find_LPC_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/find_LTP_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/find_pitch_lags_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/find_pred_coefs_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/inner_product_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/k2a_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/LPC_analysis_filter_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/LPC_inv_pred_gain_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/LTP_analysis_filter_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/LTP_scale_ctrl_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/noise_shape_analysis_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/pitch_analysis_core_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/process_gains_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/regularize_correlations_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/residual_energy_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/scale_copy_vector_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/scale_vector_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/schur_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/sort_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/warped_autocorrelation_FLP.c" />
+		<file name="${hxopus_folder}/opus/silk/float/wrappers_FLP.c" />
+
+		<file name="${hxopus_folder}/opus/silk/A2NLSF.c" />
+		<file name="${hxopus_folder}/opus/silk/ana_filt_bank_1.c" />
+		<file name="${hxopus_folder}/opus/silk/biquad_alt.c" />
+		<file name="${hxopus_folder}/opus/silk/bwexpander.c" />
+		<file name="${hxopus_folder}/opus/silk/bwexpander_32.c" />
+		<file name="${hxopus_folder}/opus/silk/check_control_input.c" />
+		<file name="${hxopus_folder}/opus/silk/CNG.c" />
+		<file name="${hxopus_folder}/opus/silk/code_signs.c" />
+		<file name="${hxopus_folder}/opus/silk/control_audio_bandwidth.c" />
+		<file name="${hxopus_folder}/opus/silk/control_codec.c" />
+		<file name="${hxopus_folder}/opus/silk/control_SNR.c" />
+		<file name="${hxopus_folder}/opus/silk/debug.c" />
+		<file name="${hxopus_folder}/opus/silk/decoder_set_fs.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_core.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_frame.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_indices.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_parameters.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_pitch.c" />
+		<file name="${hxopus_folder}/opus/silk/decode_pulses.c" />
+		<file name="${hxopus_folder}/opus/silk/dec_API.c" />
+		<file name="${hxopus_folder}/opus/silk/encode_indices.c" />
+		<file name="${hxopus_folder}/opus/silk/encode_pulses.c" />
+		<file name="${hxopus_folder}/opus/silk/enc_API.c" />
+		<file name="${hxopus_folder}/opus/silk/gain_quant.c" />
+		<file name="${hxopus_folder}/opus/silk/HP_variable_cutoff.c" />
+		<file name="${hxopus_folder}/opus/silk/init_decoder.c" />
+		<file name="${hxopus_folder}/opus/silk/init_encoder.c" />
+		<file name="${hxopus_folder}/opus/silk/inner_prod_aligned.c" />
+		<file name="${hxopus_folder}/opus/silk/interpolate.c" />
+		<file name="${hxopus_folder}/opus/silk/lin2log.c" />
+		<file name="${hxopus_folder}/opus/silk/log2lin.c" />
+		<file name="${hxopus_folder}/opus/silk/LPC_fit.c" />
+		<file name="${hxopus_folder}/opus/silk/LPC_analysis_filter.c" />
+		<file name="${hxopus_folder}/opus/silk/LPC_inv_pred_gain.c" />
+		<file name="${hxopus_folder}/opus/silk/LP_variable_cutoff.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF2A.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_decode.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_del_dec_quant.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_encode.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_stabilize.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_unpack.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_VQ.c" />
+		<file name="${hxopus_folder}/opus/silk/NLSF_VQ_weights_laroia.c" />
+		<file name="${hxopus_folder}/opus/silk/NSQ.c" />
+		<file name="${hxopus_folder}/opus/silk/NSQ_del_dec.c" />
+		<file name="${hxopus_folder}/opus/silk/pitch_est_tables.c" />
+		<file name="${hxopus_folder}/opus/silk/PLC.c" />
+		<file name="${hxopus_folder}/opus/silk/process_NLSFs.c" />
+		<file name="${hxopus_folder}/opus/silk/quant_LTP_gains.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_down2.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_down2_3.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_private_AR2.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_private_down_FIR.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_private_IIR_FIR.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_private_up2_HQ.c" />
+		<file name="${hxopus_folder}/opus/silk/resampler_rom.c" />
+		<file name="${hxopus_folder}/opus/silk/shell_coder.c" />
+		<file name="${hxopus_folder}/opus/silk/sigm_Q15.c" />
+		<file name="${hxopus_folder}/opus/silk/sort.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_decode_pred.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_encode_pred.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_find_predictor.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_LR_to_MS.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_MS_to_LR.c" />
+		<file name="${hxopus_folder}/opus/silk/stereo_quant_pred.c" />
+		<file name="${hxopus_folder}/opus/silk/sum_sqr_shift.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_gain.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_LTP.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_NLSF_CB_NB_MB.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_NLSF_CB_WB.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_other.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_pitch_lag.c" />
+		<file name="${hxopus_folder}/opus/silk/tables_pulses_per_block.c" />
+		<file name="${hxopus_folder}/opus/silk/table_LSF_cos.c" />
+		<file name="${hxopus_folder}/opus/silk/VAD.c" />
+		<file name="${hxopus_folder}/opus/silk/VQ_WMat_EC.c" />
+	</files>
+
+    <set name="SLIBEXT" value=".lib" if="windows" />
+	<set name="SLIBEXT" value=".a" unless="windows" />
+	<set name="SLIBEXT" value=".so" if="webos" />
+</xml>
