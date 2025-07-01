@@ -36,7 +36,7 @@
 #include "SigProc_FLP.h"
 #endif
 #include "pitch.h"
-#include "main.h"
+#include "silkmain.h"
 
 #if defined(OPUS_HAVE_RTCD) && !defined(OPUS_X86_PRESUME_AVX2)
 

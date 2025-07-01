@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 
 /* Convert adaptive Mid/Side representation to Left/Right stereo signal */
 void silk_stereo_MS_to_LR(

@@ -32,7 +32,7 @@
 #include <xmmintrin.h>
 #include <emmintrin.h>
 #include <smmintrin.h>
-#include "main.h"
+#include "silkmain.h"
 #include "celt/x86/x86cpu.h"
 #include "stack_alloc.h"
 

@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 #include "stack_alloc.h"
 
 /* Generates excitation for CNG LPC synthesis */

@@ -31,7 +31,7 @@
 
 #include "cpu_support.h"
 #include "macros.h"
-#include "main.h"
+#include "silkmain.h"
 #include "pitch.h"
 #include "x86cpu.h"
 

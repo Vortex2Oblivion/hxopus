@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 
 /* Quantize mid/side predictors */
 void silk_stereo_quant_pred(

@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 
 /*#define silk_enc_map(a)                ((a) > 0 ? 1 : 0)*/
 /*#define silk_dec_map(a)                ((a) > 0 ? 1 : -1)*/

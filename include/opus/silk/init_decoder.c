@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 
 #ifdef ENABLE_OSCE
 #include "osce.h"

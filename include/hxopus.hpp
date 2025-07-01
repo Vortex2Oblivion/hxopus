@@ -9,10 +9,10 @@
 #include <math.h>
 #include <haxe/io/Bytes.h>
 
-static const char * hxopus_get_version_string();
+const char * hxopus_get_version_string();
 
 typedef Array_obj<unsigned char> *ByteArray;
 
 
-static ByteArray hxopus_to_bytes(::Array< unsigned char >  data_buffer_value);
+ByteArray hxopus_to_bytes(::Array< unsigned char >  data_buffer_value);
 #endif // HXOPUS_H

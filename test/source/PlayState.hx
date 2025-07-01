@@ -11,8 +11,8 @@ class PlayState extends FlxState {
 		super.create();
 
 		var time:Float = Sys.time();
-		Opus.toFlxSound("assets/music/shockwaveshuffle.opus").play();
-		trace(Sys.time() - time);
+		FlxG.sound.list.add(Opus.toFlxSound("assets/music/shockwaveshuffle.opus")).play();
+		trace("Loaded in " + (Sys.time() - time) + " seconds");
 	}
 
 	override public function update(elapsed:Float) {

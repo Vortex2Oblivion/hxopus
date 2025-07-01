@@ -9,11 +9,16 @@
 #include <limits.h>
 #include <math.h>
 #include <haxe/io/Bytes.h>
+#include "opus_defines.h"
 
 
 typedef Array_obj<unsigned char> *ByteArray;
 
-static bool is_buffer(ByteArray object)
+const char * hxopus_get_version_string(){
+	return opus_get_version_string();
+}
+
+bool is_buffer(ByteArray object)
 {
 	return object != 0;
 }
@@ -33,7 +38,7 @@ int get_buffer_size(ByteArray inBuffer)
 	return inBuffer->length;
 }
 
-static ByteArray hxopus_to_bytes(::Array< unsigned char > _d)
+ByteArray hxopus_to_bytes(::Array< unsigned char > _d)
 {
 	ByteArray data_buffer_value = _d.GetPtr();
 	if (!is_buffer(data_buffer_value))

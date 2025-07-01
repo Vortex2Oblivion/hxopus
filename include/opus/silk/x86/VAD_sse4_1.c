@@ -33,7 +33,7 @@
 #include <emmintrin.h>
 #include <smmintrin.h>
 
-#include "main.h"
+#include "silkmain.h"
 #include "stack_alloc.h"
 
 /* Weighting factors for tilt measure */

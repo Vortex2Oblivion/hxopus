@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #include "SigProc_FIX.h"
 #include "float_cast.h"
-#include "main.h"
+#include "silkmain.h"
 #include <math.h>
 
 #ifdef  __cplusplus

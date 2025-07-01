@@ -32,7 +32,7 @@
 #include <xmmintrin.h>
 #include <emmintrin.h>
 #include <smmintrin.h>
-#include "main.h"
+#include "silkmain.h"
 
 #include "SigProc_FIX.h"
 #include "pitch.h"

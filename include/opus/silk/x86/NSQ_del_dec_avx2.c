@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_defines.h"
 #include <immintrin.h>
 
-#include "main.h"
+#include "silkmain.h"
 #include "stack_alloc.h"
 #include "NSQ.h"
 #include "celt/x86/x86cpu.h"

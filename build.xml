@@ -1,6 +1,7 @@
 <xml>
 	<pragma once="true" />
 	<set name="hxopus_folder" value="${haxelib:hxopus}/include" />
+	<include name="${HXCPP}/build-tool/BuildCommon.xml" />
 
 	<files id="haxe">
 		<compilerflag value="-I${hxopus_folder}/" />
@@ -203,5 +204,11 @@
 		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
 
 		<compilerflag value="-DWIN32" if="windows" />
+
 	</files>
+
+	<set name="SLIBEXT" value=".lib" if="windows" />
+	<set name="SLIBEXT" value=".a" unless="windows" />
+	<set name="SLIBEXT" value=".so" if="webos" />
+
 </xml>

@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #ifdef OPUS_CHECK_ASM
 # include <string.h>
 #endif
-#include "main.h"
+#include "silkmain.h"
 #include "stack_alloc.h"
 #include "os_support.h"
 

@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "config.h"
 #endif
 
-#include "main.h"
+#include "silkmain.h"
 
 /* Unpack predictor values and indices for entropy coding tables */
 void silk_NLSF_unpack(
