@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": ["externs", "bindings", "cpp", "audio", "opus" ,"flixel", "openfl", "ndll"],
   "description": "Support for decoding and playing the opus audio format in haxe.",
-  "version": "1.0.0",
-  "releasenote": "First release yay!",
+  "version": "2.0.0",
+  "releasenote": "No more ndll",
   "contributors": ["Vortex"]
 }

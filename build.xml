@@ -3,7 +3,7 @@
 	<set name="hxopus_folder" value="${haxelib:hxopus}/include" />
 	<include name="${HXCPP}/build-tool/BuildCommon.xml" />
 
-	<files id="haxe">
+	<files id="hxopus">
 		<compilerflag value="-I${hxopus_folder}/" />
 		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
 		<compilerflag value="-I${hxopus_folder}/opus" />
@@ -27,18 +27,30 @@
 		<compilerflag value="-DWIN32" if="windows" />
 
 		<file name="${hxopus_folder}/hxopus.cpp" />
+	</files>
 
-		<file name="${hxopus_folder}/cherryaudio/cherryaudio.c" />
+	<files id="libopus">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
 
-		<file name="${hxopus_folder}/opusfile/src/http.c" />
-		<file name="${hxopus_folder}/opusfile/src/info.c" />
-		<file name="${hxopus_folder}/opusfile/src/internal.c" />
-		<file name="${hxopus_folder}/opusfile/src/opusfile.c" />
-		<file name="${hxopus_folder}/opusfile/src/stream.c" />
-		<file name="${hxopus_folder}/opusfile/src/wincerts.c" />
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
 
-		<file name="${hxopus_folder}/ogg/src/framing.c" />
-		<file name="${hxopus_folder}/ogg/src/bitwise.c" />
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
 
 		<file name="${hxopus_folder}/opus/src/analysis.c" />
 		<file name="${hxopus_folder}/opus/src/extensions.c" />
@@ -182,6 +194,116 @@
 		<file name="${hxopus_folder}/opus/silk/VQ_WMat_EC.c" />
 	</files>
 
+	<files id="cherryaudio">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
+
+		<file name="${hxopus_folder}/cherryaudio/cherryaudio.c" />
+	</files>
+
+	<files id="libopusfile">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
+
+		<file name="${hxopus_folder}/opusfile/src/http.c" />
+		<file name="${hxopus_folder}/opusfile/src/info.c" />
+		<file name="${hxopus_folder}/opusfile/src/internal.c" />
+		<file name="${hxopus_folder}/opusfile/src/opusfile.c" />
+		<file name="${hxopus_folder}/opusfile/src/stream.c" />
+		<file name="${hxopus_folder}/opusfile/src/wincerts.c" />
+	</files>
+
+	<files id="libogg">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
+
+		<file name="${hxopus_folder}/ogg/src/framing.c" />
+		<file name="${hxopus_folder}/ogg/src/bitwise.c" />
+	</files>
+
+
+	<files id="haxe">
+		<compilerflag value="-I${hxopus_folder}/" />
+		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
+		<compilerflag value="-I${hxopus_folder}/opus" />
+		<compilerflag value="-I${hxopus_folder}/opus/include" />
+		<compilerflag value="-I${hxopus_folder}/opus/celt" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk" />
+		<compilerflag value="-I${hxopus_folder}/opus/silk/float" />
+		<compilerflag value="-I${hxopus_folder}/opusfile/src" />
+		<compilerflag value="-I${hxopus_folder}/ogg/include" />
+
+		<compilerflag value="-DUSE_ALLOCA" />
+		<compilerflag value="-DOPUS_BUILD" />
+		<compilerflag value="-DHAVE_CONFIG_H" />
+		<compilerflag value="-DOUTSIDE_SPEEX" />
+		<compilerflag value="-DFLOATING_POINT" />
+		<compilerflag value="-DRANDOM_PREFIX=speex" />
+		<compilerflag value="-DSPX_RESAMPLE_EXPORT=" />
+
+		<compilerflag value="-DNO_PRECOMPILED_HEADERS"/>
+
+		<compilerflag value="-DWIN32" if="windows" />
+
+	</files>
+
 	<files id="__main__">
 		<compilerflag value="-I${hxopus_folder}/" />
 		<compilerflag value="-I${hxopus_folder}/cherryaudio" />
@@ -206,6 +328,14 @@
 		<compilerflag value="-DWIN32" if="windows" />
 
 	</files>
+
+	<target id="haxe">
+		<files id="hxopus" />
+		<files id="libopus" />
+		<files id="libopusfile" />
+		<files id="libogg" />
+		<files id="cherryaudio" />
+	</target>
 
 	<set name="SLIBEXT" value=".lib" if="windows" />
 	<set name="SLIBEXT" value=".a" unless="windows" />

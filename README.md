@@ -4,7 +4,7 @@
 <p align="center">  
     <img src="https://img.shields.io/github/repo-size/Vortex2Oblivion/hxopus" />
     <img src="https://badgen.net/github/open-issues/Vortex2Oblivion/hxopus" />
-    <img src="https://badgen.net/badge/license/MIT/green"/>
+    <img src="https://badgen.net/badge/license/MIT/green" />
 </p>
 
 Haxe support for the [Opus Audio Codec](https://opus-codec.org/)
@@ -68,6 +68,6 @@ Bytes.ofData(Opus.getDecodedBytes(bytes:Bytes));
 
 [Cherry](https://git.gay/cherry) - [CherryAudio](https://git.gay/cherry/cherryaudio) used for decoding the opus files and helping me optimize the opus loader.
 
-[Carlos Ballesteros Velasco](https://github.com/soywiz) - [OpenFL-Opus](https://lib.haxe.org/p/openfl-opus/) Referenced a lot when making the ndll for hxopus.
+[Carlos Ballesteros Velasco](https://github.com/soywiz) - [OpenFL-Opus](https://lib.haxe.org/p/openfl-opus/) Referenced a lot when making hxopus.
 
 [Prio](https://www.youtube.com/channel/UChNtItn8z2v51fjNhwiDQHQ) - [Shockwave Shuffle](https://www.youtube.com/watch?v=q4TIa9ZIQPU) Song used for testing playback.

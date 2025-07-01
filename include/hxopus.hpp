@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <math.h>
-#include <haxe/io/Bytes.h>
 
 const char * hxopus_get_version_string();
 

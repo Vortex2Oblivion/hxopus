@@ -8,7 +8,6 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <math.h>
-#include <haxe/io/Bytes.h>
 #include "opus_defines.h"
 
 
@@ -18,22 +17,22 @@ const char * hxopus_get_version_string(){
 	return opus_get_version_string();
 }
 
-bool is_buffer(ByteArray object)
+inline bool is_buffer(ByteArray object)
 {
 	return object != 0;
 }
 
-ByteArray alloc_buffer_length(int inLen)
+inline ByteArray alloc_buffer_length(int inLen)
 {
 	return new Array_obj<unsigned char>(inLen, inLen);
 }
 
-char *get_buffer_data(ByteArray inBuffer)
+inline char *get_buffer_data(ByteArray inBuffer)
 {
 	return inBuffer->GetBase();
 }
 
-int get_buffer_size(ByteArray inBuffer)
+inline int get_buffer_size(ByteArray inBuffer)
 {
 	return inBuffer->length;
 }
