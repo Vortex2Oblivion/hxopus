@@ -14,6 +14,7 @@ import flixel.sound.FlxSound;
 
 @:buildXml("<include name='${haxelib:hxopus}/build.xml' />")
 @:include("hxopus.hpp")
+@:include("opus.h")
 extern class Opus {
 	/**
 	 * Gets the current version of libopus.
@@ -86,9 +87,9 @@ extern class Opus {
 	}
 	#end
 
-	@:native("hxopus_get_version_string")
+	@:native("opus_get_version_string")
 	private static function opus_get_version_string():ConstCharStar;
 
-	@:native("hxopus_to_bytes")
+	@:native("hxopus::decodeBytes")
 	private static function hxopus_to_bytes(encodedBytes:BytesData):BytesData;
 }

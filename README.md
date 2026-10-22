@@ -66,8 +66,6 @@ Bytes.ofData(Opus.getDecodedBytes(bytes:Bytes));
 
 [Gian-Carlo Pascutto](https://github.com/gcp) - [Libogg](https://github.com/gcp/libogg).
 
-[Cherry](https://git.gay/cherry) - [CherryAudio](https://git.gay/cherry/cherryaudio) used for decoding the opus files and helping me optimize the opus loader.
-
 [Carlos Ballesteros Velasco](https://github.com/soywiz) - [OpenFL-Opus](https://lib.haxe.org/p/openfl-opus/) Referenced a lot when making hxopus.
 
 [Prio](https://www.youtube.com/channel/UChNtItn8z2v51fjNhwiDQHQ) - [Shockwave Shuffle](https://www.youtube.com/watch?v=q4TIa9ZIQPU) Song used for testing playback.

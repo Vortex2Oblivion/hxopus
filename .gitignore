@@ -1,6 +1,8 @@
 test/export
 .vscode/*
 
+.DS_Store
+
 .haxelib/
 .haxelsp/recording/
 dump/
