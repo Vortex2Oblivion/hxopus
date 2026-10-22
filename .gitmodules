@@ -1,0 +1,9 @@
+[submodule "external/opusfile"]
+	path = external/opusfile
+	url = https://github.com/xiph/opusfile
+[submodule "external/opus"]
+	path = external/opus
+	url = https://github.com/xiph/opus
+[submodule "external/ogg"]
+	path = external/ogg
+	url = https://github.com/xiph/ogg
